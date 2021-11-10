@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -17,7 +18,7 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        <a href="/" target="_blank">Created by dannzdev ✌️</a>
+        <Link href="/" target="_blank">Created by dannzdev ✌️</Link>
       </footer>
     </div>
   )

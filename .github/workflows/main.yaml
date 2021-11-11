@@ -9,12 +9,10 @@ on:
     - main
 
 jobs:
-  build_test_publish:
+  build:
   - name: Build, test and deploy to Heroku
     runs-on: ubuntu-latest
     steps:
-
-    - name: Deploy
       - uses: actions/checkout@v2
       - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:

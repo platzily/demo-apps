@@ -7,7 +7,6 @@ on:
 
 jobs:
   build:
-  - name: Build, test and deploy to Heroku
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -17,4 +16,3 @@ jobs:
           heroku_app_name: "nextjs-demo-apps" #Must be unique in Heroku
           heroku_email: "danielsanchez1502@gmail.com"
           usedocker: true
-      

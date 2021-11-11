@@ -1,14 +1,30 @@
-name: Deploy
+name: push-master
 
 on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+    - main
 
 jobs:
-  build:
+  build_test_publish:
+  - name: Build, test and deploy to Heroku
     runs-on: ubuntu-latest
     steps:
+
+    - name: Checkout Code
+        uses: actions/checkout@v2
+        with:
+          # Full git history is needed to get a proper list of changed files within `super-linter`
+          fetch-depth: 0
+      # Run Linter against code base #
+      
+    - name: Lint Code Base
+        uses: github/super-linter@v4
+
+    - name: Deploy
       - uses: actions/checkout@v2
       - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:
@@ -16,3 +32,4 @@ jobs:
           heroku_app_name: "nextjs-demo-apps" #Must be unique in Heroku
           heroku_email: "danielsanchez1502@gmail.com"
           usedocker: true
+      

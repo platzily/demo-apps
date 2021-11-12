@@ -24,6 +24,7 @@ jobs:
           result_path: coverage/.last_run.json
           min_coverage: 70
           token: ${{ github.token }}
+
           
   Build-Deploy:
     needs: [Lint-Testing-Build]

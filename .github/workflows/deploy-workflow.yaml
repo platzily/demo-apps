@@ -19,7 +19,7 @@ jobs:
               npm run test
               npm run lint
 
-  Deploying:
+  Deploy:
     needs: [Lint-Testing-Build]
     runs-on: ubuntu-latest
     defaults:
@@ -29,7 +29,16 @@ jobs:
       - uses: actions/checkout@v2
       - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:
+          docker_heroku_process_type: web
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "nextjs-demo-apps" #Must be unique in Heroku
           heroku_email: "danielsanchez1502@gmail.com"
-          usedocker: true
+          justlogin: true
+      - name: "Login to heroku registry"
+        run: heroku container:login
+
+      - name: "Build and push to heroku registry"
+        run: heroku container:push web --app email-service-web
+
+      - name: "Releases the container"
+        run: heroku container:release web --app email-service-web

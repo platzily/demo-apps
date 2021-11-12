@@ -4,8 +4,6 @@ on:
   push:
   branches: 
     - main
-    paths:
-      - "demo-apps/frontend/NextJS-Demo/**"
 
 
 jobs:

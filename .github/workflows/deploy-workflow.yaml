@@ -15,6 +15,7 @@ jobs:
       - uses: actions/checkout@v2
       - run: |
               npm ci
+              npm build
               npm run lint
 
   Testing-Coverage:
@@ -27,7 +28,7 @@ jobs:
       - uses: actions/checkout@v2
       - run: |
               npm ci
-              npm run build
+              npm build
               npm run test
 
 

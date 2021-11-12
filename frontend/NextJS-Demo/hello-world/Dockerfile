@@ -1,6 +1,6 @@
 FROM node:16-alpine3.12 as dependencies
 WORKDIR /hello-world
-COPY package.json ./
+COPY package.json package-lock.json ./
 RUN npm install --frozen-lockfile
 
 FROM node:16-alpine3.12 as builder

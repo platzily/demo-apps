@@ -3,8 +3,6 @@ name: Build-Test-Deploy
 on:
   push:
     branches: [main]
-    paths:
-      - 'frontend/NextJS-Demo/hello-world/next.config.js'
 
 jobs:
 

@@ -6,7 +6,7 @@ on:
 
 jobs:
 
-  Lint-Testing-Build:
+  Lint-Testing-Coverage:
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -18,8 +18,14 @@ jobs:
               npm run build
               npm run test
               npm run lint
-
-  Deploy:
+      - uses: devmasx/coverage-check-action@v1.2.0
+        with:
+          type: simplecov
+          result_path: coverage/.last_run.json
+          min_coverage: 70
+          token: ${{ github.token }}
+          
+  Build-Deploy:
     needs: [Lint-Testing-Build]
     runs-on: ubuntu-latest
     defaults:

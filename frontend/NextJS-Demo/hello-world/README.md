@@ -8,19 +8,4 @@ If you would like to have your GitHub profile in the [website](https://try-githu
 
 If you are unfamiliar with GitHub and open source this could be a great opportunity to make your first PR.
 
-## Local dev setup
 
-### Install dependenceis
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```

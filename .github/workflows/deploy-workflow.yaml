@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'frontend/**'
+      - 'frontend/NextJS-Demo/hello-world/**'
 
 jobs:
 

@@ -18,8 +18,9 @@ jobs:
               npm run build
               npm run test
               npm run lint
-  Deploying-Docker-to-Heroku:
-    needs: Lint-Testing-Build
+
+  Deploying:
+    needs: [Lint-Testing-Build]
     runs-on: ubuntu-latest
     defaults:
       run:

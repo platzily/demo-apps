@@ -6,7 +6,20 @@ on:
 
 jobs:
 
-  Lint-Testing-Coverage:
+  Lint:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./frontend/NextJS-Demo/hello-world
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+              npm ci
+              npm run build
+              npm run lint
+
+  Testing-Coverage:
+  needs: [Lint]
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -17,22 +30,6 @@ jobs:
               npm ci
               npm run build
               npm run test
-              npm run lint
-
-  Coverage:
-    needs: [Lint-Testing-Build]
-    runs-on: ubuntu-latest
-    defaults:
-        run:
-          working-directory: ./frontend/NextJS-Demo/hello-world
-      steps:
-        - uses: actions/checkout@v2
-        - uses: devmasx/coverage-check-action@v1.2.0
-          with:
-            type: lcov
-            result_path: coverage/example.lcov
-            min_coverage: 90
-            token: ${{ github.token }}
 
 
   Build-Deploy:

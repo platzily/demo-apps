@@ -19,7 +19,7 @@ jobs:
               npm run lint
 
   Testing-Coverage:
-  needs: [Lint]
+    needs: [Lint]
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -33,7 +33,7 @@ jobs:
 
 
   Build-Deploy:
-    needs: [Coverage]
+    needs: [Testing-Coverage]
     runs-on: ubuntu-latest
     defaults:
       run:

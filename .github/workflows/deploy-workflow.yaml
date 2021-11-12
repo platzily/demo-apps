@@ -26,7 +26,6 @@ jobs:
       run:
         working-directory: ./frontend/NextJS-Demo/hello-world
     steps:
-     runs-on: ubuntu-latest
       - uses: actions/checkout@v2
       - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:

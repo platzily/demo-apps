@@ -1,0 +1,29 @@
+name: Deploy
+
+on:
+  push: [main]
+  paths:
+      - "demo-apps/frontend/NextJS-Demo/hello-world/**"
+      - ".github/workflows/deploy-workflow.yaml"
+
+jobs:
+
+  unit_test-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+              npm ci
+              npm run build
+              npm run test
+              npm run lint
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "nextjs-demo-apps" #Must be unique in Heroku
+          heroku_email: "danielsanchez1502@gmail.com"
+          usedocker: true

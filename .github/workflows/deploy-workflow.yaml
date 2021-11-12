@@ -1,9 +1,10 @@
 name: Deploy
 
 on:
-  push:
-    branches:
-      - main
+  push: [main]
+  paths:
+      - "demo-apps/frontend/NextJS-Demo/hello-world/**"
+      - ".github/workflows/deploy-workflow.yaml"
 
 jobs:
 

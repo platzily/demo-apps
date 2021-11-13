@@ -31,7 +31,7 @@ To get a local copy up and running follow these simple example steps.
 
 Below you can see a CI/CD Pipeline Draft of the internal behavior.
 
-[![Header](https://github.com/platzily/demo-apps/blob/main/frontend/NextJS-Demo/hello-world/public/ci_cd-pipeline-platzily.png)]
+![Header](https://github.com/platzily/demo-apps/blob/main/frontend/NextJS-Demo/hello-world/public/ci_cd-pipeline-platzily.png)
 
 
 ### Installation
@@ -60,6 +60,5 @@ Below you can see a CI/CD Pipeline Draft of the internal behavior.
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 <p align="right">(<a href="#top">back to top</a>)</p>

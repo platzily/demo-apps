@@ -1,12 +1,5 @@
 <div id="top"></div>
 
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
-</div>
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
@@ -22,8 +15,6 @@ In this repo you will find a NextJS Application with a Docker Container that is 
 * Deploy project to Heroku Database after it passes all the test and requirements.
 
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 
 ### Built With
 
@@ -31,9 +22,6 @@ In this repo you will find a NextJS Application with a Docker Container that is 
 * [Node.js](https://reactjs.org/)
 * [Docker](https://vuejs.org/)
 * [Github Actions](https://angular.io/)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -43,12 +31,7 @@ To get a local copy up and running follow these simple example steps.
 
 Below you can see a CI/CD Pipeline Draft of the internal behavior.
 
-<div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
-</div>
-
+![Header](https://github.com/platzily/demo-apps/blob/main/frontend/NextJS-Demo/hello-world/public/ci_cd-pipeline-platzily.png)
 
 
 ### Installation
@@ -72,6 +55,16 @@ Below you can see a CI/CD Pipeline Draft of the internal behavior.
 
 
 
+<<<<<<< HEAD
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
+=======
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+>>>>>>> 73fd55a27bf50bcd8466f6b4a1c9bdc827866f51

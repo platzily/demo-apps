@@ -1,12 +1,5 @@
 <div id="top"></div>
 
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
-</div>
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
@@ -43,11 +36,8 @@ To get a local copy up and running follow these simple example steps.
 
 Below you can see a CI/CD Pipeline Draft of the internal behavior.
 
-<div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
-</div>
+[![Header](https://github.com/platzily/demo-apps/blob/main/frontend/NextJS-Demo/hello-world/public/ci_cd-pipeline-platzily.png)]
+
 
 
 

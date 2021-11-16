@@ -55,16 +55,6 @@ Below you can see a CI/CD Pipeline Draft of the internal behavior.
 
 
 
-<<<<<<< HEAD
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-=======
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-
-<p align="right">(<a href="#top">back to top</a>)</p>
->>>>>>> 73fd55a27bf50bcd8466f6b4a1c9bdc827866f51

@@ -1,0 +1,55 @@
+name: Build-Test-Deploy
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+
+  Lint:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./backend/nodejs-demo-app
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+              npm ci
+              npm build
+              npm run lint
+  Testing-Coverage:
+    needs: [Lint]
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./backend/nodejs-demo-app
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+              npm ci
+              npm build
+              npm run test
+  Build-Deploy:
+    needs: [Testing-Coverage]
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./backend/nodejs-demo-app
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+        with:
+          docker_heroku_process_type: web
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "nodejs-platzily-demo-app" #Must be unique in Heroku
+          heroku_email: "gyesidr2sk8@gmail.com"
+          justlogin: true
+
+      - name: "Login to heroku registry"
+        run: heroku container:login
+
+      - name: "Build and push to heroku registry"
+        run: heroku container:push web --app nodejs-platzily-demo-app
+
+      - name: "Releases the container"
+        run: heroku container:release web --app nodejs-platzily-demo-app

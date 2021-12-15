@@ -44,15 +44,15 @@ jobs:
         with:
           docker_heroku_process_type: web
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "nextjs-demo-apps" #Must be unique in Heroku
-          heroku_email: "danielsanchez1502@gmail.com"
+          heroku_app_name: "nextjs-demo-apps-platzily-mvp" #Must be unique in Heroku
+          heroku_email: "ivchip@gmail.com"
           justlogin: true
 
       - name: "Login to heroku registry"
         run: heroku container:login
 
       - name: "Build and push to heroku registry"
-        run: heroku container:push web --app nextjs-demo-apps
+        run: heroku container:push web --app nextjs-demo-apps-platzily-mvp
 
       - name: "Releases the container"
-        run: heroku container:release web --app nextjs-demo-apps
+        run: heroku container:release web --app nextjs-demo-apps-platzily-mvp

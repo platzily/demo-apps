@@ -18,7 +18,7 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        <Link href="/" target="_blank">Created by ivchip ✌️</Link>
+        <Link href="/" target="_blank">Created by ivchip82 ✌️</Link>
       </footer>
     </div>
   )

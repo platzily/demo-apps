@@ -13,12 +13,12 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          I am the MVP of Platzily
+          I am the MVP of Platzily Live!
         </h1>
       </main>
 
       <footer className={styles.footer}>
-        <Link href="/" target="_blank">Created by ivchip82 ✌️</Link>
+        <Link href="/" target="_blank">Created by ivchip ✌️</Link>
       </footer>
     </div>
   )

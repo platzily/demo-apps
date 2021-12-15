@@ -13,7 +13,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Hello Paltzily!
+          I'm the MVP of Platzily
         </h1>
       </main>
 

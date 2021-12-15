@@ -15,7 +15,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-              npm ci
               npm build
               npm run lint
 

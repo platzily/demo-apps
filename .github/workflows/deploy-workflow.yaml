@@ -28,7 +28,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-              npm build
+              npm run build
               npm run test
 
 
